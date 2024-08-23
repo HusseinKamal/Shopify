@@ -77,4 +77,5 @@ dependencies {
     implementation(libs.ktor.client.cio)
     implementation(libs.koin)
     implementation(libs.ktor.content.negoiation)
+    implementation(libs.coil)
 }

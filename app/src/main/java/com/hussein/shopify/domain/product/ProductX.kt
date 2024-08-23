@@ -7,47 +7,47 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class ProductX(
     @SerialName("availabilityStatus")
-    var availabilityStatus: String,
+    var availabilityStatus: String?=null,
     @SerialName("brand")
     var brand: String?=null,
     @SerialName("category")
-    var category: String,
+    var category: String?=null,
     @SerialName("description")
     var description: String,
     @SerialName("dimensions")
-    var dimensions: Dimensions,
+    var dimensions: Dimensions?=null,
     @SerialName("discountPercentage")
-    var discountPercentage: Double,
+    var discountPercentage: Double?=null,
     @SerialName("id")
     var id: Int,
     @SerialName("images")
-    var images: List<String>,
+    var images: List<String>?=ArrayList(),
     @SerialName("meta")
-    var meta: Meta,
+    var meta: Meta?=null,
     @SerialName("minimumOrderQuantity")
-    var minimumOrderQuantity: Int,
+    var minimumOrderQuantity: Int?=null,
     @SerialName("price")
     var price: Double,
     @SerialName("rating")
-    var rating: Double,
+    var rating: Double?=null,
     @SerialName("returnPolicy")
-    var returnPolicy: String,
+    var returnPolicy: String?=null,
     @SerialName("reviews")
-    var reviews: List<Review>,
+    var reviews: List<Review>?=ArrayList(),
     @SerialName("shippingInformation")
-    var shippingInformation: String,
+    var shippingInformation: String?=null,
     @SerialName("sku")
-    var sku: String,
+    var sku: String?=null,
     @SerialName("stock")
-    var stock: Int,
+    var stock: Int?=null,
     @SerialName("tags")
-    var tags: List<String>,
+    var tags: List<String>?=ArrayList(),
     @SerialName("thumbnail")
     var thumbnail: String,
     @SerialName("title")
     var title: String,
     @SerialName("warrantyInformation")
-    var warrantyInformation: String,
+    var warrantyInformation: String?=null,
     @SerialName("weight")
-    var weight: Int
+    var weight: Int?=null
 )
