@@ -29,7 +29,7 @@ import com.hussein.shopify.presentation.viewmodel.MainViewModel
 @Composable
 fun MainScreen(modifier: Modifier = Modifier, mainViewModel: MainViewModel) {
     LaunchedEffect(key1 = true) {
-        mainViewModel.getUserData()
+        mainViewModel.getProductData()
     }
     val productDataModel = mainViewModel.productData.collectAsState()
 

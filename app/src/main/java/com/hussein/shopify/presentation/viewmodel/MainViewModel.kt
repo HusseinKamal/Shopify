@@ -13,7 +13,7 @@ class MainViewModel(private val userRepository: ProductRepository) : ViewModel()
     private val _productData = MutableStateFlow<Result<Product>>(Result.Loading)
     val productData: StateFlow<Result<Product>> = _productData
 
-    fun getUserData() {
+    fun getProductData() {
         viewModelScope.launch {
             userRepository.getProductData().collect {
                 _productData.value = it

@@ -13,7 +13,11 @@ koin = "3.4.0"
 kotlinx-serialization = "1.5.1"
 kotlinx-jetbrains-serialization = "1.8.10"
 coil-version ="2.1.0"
-
+material3 ="1.2.1"
+compose-tooling = "1.4.3"
+mockk = "1.12.0"
+mockito = "4.12.0"
+jmock = "2.12.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -45,6 +49,17 @@ kotlinx-serialization-core = { module = "org.jetbrains.kotlinx:kotlinx-serializa
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
 
 coil = {module = "io.coil-kt:coil-compose" , version.ref = "coil-version"}
+
+material3 = {module = "androidx.compose.material3:material3" , version.ref = "material3"}
+ui-tooling = {module = "androidx.compose.ui:ui-tooling" , version.ref = "compose-tooling"}
+ui-test-junit4 = {module = "androidx.compose.ui:ui-test-junit4" , version.ref = "compose-tooling"}
+ui-test-manifest = {module = "androidx.compose.ui:ui-test-manifest" , version.ref = "compose-tooling"}
+mockk-io = {module = "io.mockk:mockk" , version.ref = "mockk"}
+mockito-org = {module = "org.mockito:mockito-core" , version.ref = "mockito"}
+mockito-inline = {module = "org.mockito:mockito-inline" , version.ref = "mockito"}
+jmock-org = {module = "org.jmock:jmock" , version.ref = "jmock"}
+
+
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

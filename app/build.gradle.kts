@@ -78,4 +78,14 @@ dependencies {
     implementation(libs.koin)
     implementation(libs.ktor.content.negoiation)
     implementation(libs.coil)
+    implementation(libs.material3)
+    implementation(libs.ui.tooling)
+    androidTestImplementation(libs.ui.test.junit4)
+    androidTestImplementation(libs.ui.test.manifest)
+    testImplementation(libs.mockk.io)
+    testImplementation(libs.mockito.org)
+    testImplementation(libs.mockito.inline)
+    testImplementation(libs.jmock.org)
+
+
 }
