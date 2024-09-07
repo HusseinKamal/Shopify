@@ -60,7 +60,9 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.androidx.ui.test.junit4.android)
     testImplementation(libs.junit)
+    testImplementation(libs.junit.jupiter)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(platform(libs.androidx.compose.bom))
@@ -83,9 +85,10 @@ dependencies {
     androidTestImplementation(libs.ui.test.junit4)
     androidTestImplementation(libs.ui.test.manifest)
     testImplementation(libs.mockk.io)
-    testImplementation(libs.mockito.org)
-    testImplementation(libs.mockito.inline)
+    //testImplementation(libs.mockito.org)
+    //testImplementation(libs.mockito.inline)
     testImplementation(libs.jmock.org)
-
-
+    testImplementation(libs.coroutine.test)
+    testImplementation (libs.turbine)
+    testImplementation (libs.truth)
 }

@@ -11,7 +11,7 @@ data class Product(
     @SerialName("products")
     var products: List<ProductX>,
     @SerialName("skip")
-    var skip: Int,
+    var skip: Int?=0,
     @SerialName("total")
-    var total: Int
+    var total: Int?=0
 )
