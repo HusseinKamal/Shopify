@@ -1,5 +1,6 @@
 package com.hussein.shopify
 
+import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.assertion.ViewAssertions.matches
@@ -11,6 +12,7 @@ import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import androidx.compose.ui.test.onNodeWithText
+import androidx.test.core.app.takeScreenshot
 
 @RunWith(AndroidJUnit4::class)
 class MainActivityTest {
@@ -20,9 +22,9 @@ class MainActivityTest {
 
     @Test
     fun testLazyColumnItems() {
-        composeRule.setContent {
+      /*  composeRule.setContent {
             MainActivity()
-        }
+        }*/
 
         val products = listOf(
             ProductX(
@@ -42,12 +44,11 @@ class MainActivityTest {
         )
         composeRule.setContent {
             ProductItemCard(product = products[0])
-
         }
 
         products.forEach { product ->
-            //onNodeWithText(product.title).assertIsDisplayed()
-           // onNodeWithText(product.price.toString()).assertIsDisplayed()
+            composeRule.onNodeWithText(product.title).assertIsDisplayed()
+            composeRule.onNodeWithText(product.description).assertIsDisplayed()
         }
     }
 }
